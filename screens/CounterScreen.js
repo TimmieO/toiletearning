@@ -30,7 +30,7 @@ export default function CounterScreen({salary}) {
 
   return (
     <SafeAreaView style={globalStyles.counterScreenContainer}>
-      <Header />
+      <Header headerText={"Counter"}/>
       <TimeCounter startCounter={startCounter} stopCounter={stopCounter}/>
       <SavingsCounter counter={counter} salary={salary} />
     </SafeAreaView>

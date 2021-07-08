@@ -3,8 +3,17 @@ import { StyleSheet, Text, Button, View, TextInput, Keyboard, Pressable, Touchab
 
 export default function SetSalaryModule({setNewSalary}){
 
+  const [salaryVal, setSalaryVal] = useState()
+
+  //Save user input in state
   const changeSalaryText = (text) => {
-    setNewSalary(text);
+    setSalaryVal(text)
+  }
+  //onPress on button send state value
+  const submitSalary = () => {
+    if(salaryVal.length > 0){
+      setNewSalary(salaryVal);
+    }
   }
 
   return (
@@ -25,6 +34,7 @@ export default function SetSalaryModule({setNewSalary}){
           <View>
             <Button
               title="Submit"
+              onPress={() => submitSalary()}
             />
           </View>
         </View>
