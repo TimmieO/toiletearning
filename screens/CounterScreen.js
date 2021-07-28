@@ -6,10 +6,10 @@ import globalStyles from "../style/styles";
 
 //Components
 import Header from '../components/Header'
-import TimeCounter from '../components/TimeCounter'
-import SavingsCounter from '../components/SavingsCounter'
+import TimeCounter from '../components/counters/TimeCounter'
+import SavingsCounter from '../components/counters/SavingsCounter'
 
-export default function CounterScreen({salary}) {
+export default function CounterScreen({salary, saveTime}) {
 
   //States
   const [timer, setTimer] = useState(null);
@@ -32,7 +32,7 @@ export default function CounterScreen({salary}) {
     <SafeAreaView style={globalStyles.counterScreenContainer}>
       <Header headerText={"Counter"}/>
       <TimeCounter startCounter={startCounter} stopCounter={stopCounter}/>
-      <SavingsCounter counter={counter} salary={salary} />
+      <SavingsCounter counter={counter} salary={salary} saveTime={saveTime} />
     </SafeAreaView>
   );
 }

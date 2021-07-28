@@ -10,6 +10,11 @@ import globalStyles from "../style/styles";
 //Components
 import Header from '../components/Header'
 
+/*TODO-
+  Add Currency picker
+
+ */
+
 export default function SettingScreen({salary, setNewSalary}) {
 
   //States
@@ -33,6 +38,8 @@ export default function SettingScreen({salary, setNewSalary}) {
     setSalaryInput(userPreSalary);
     setIsEditing(false)
   }
+
+
 
   useEffect(() => {
     setSalaryInput(salary);
